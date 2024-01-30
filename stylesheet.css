@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500&display=swap");
+.pagination-buttons {
+  --pagination-button: #adb5bd;
+  --pagination-button-active: #6c757d;
+  --pagination-button-disabled: #dee2e6;
+  --pagination-button-selected: #495057;
+
+  text-align: center;
+  padding: 15px 0;
+}
+.pagination-buttons,
+.pagination-buttons * {
+  box-sizing: border-box;
+}
+.page-btn {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+
+  height: 20px;
+  width: 20px;
+
+  font-family: "Figtree", sans-serif;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: var(--pagination-button);
+
+  transition: color 0.15s;
+}
+.page-btn--active {
+  color: var(--pagination-button-selected);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.page-btn:hover {
+  color: var(--pagination-button-selected);
+}
+.page-btn:not(:last-of-type) {
+  margin-right: 10px;
+}
+.page-btn:active {
+  color: var(--pagination-button-active);
+}
+.page-btn:disabled {
+  opacity: 0.3;
+}
+.page-btn:not(:disabled) {
+  cursor: pointer;
+}
+
+.start-page::before {
+  content: "\e5dc";
+  font-family: "Material Icons";
+  font-size: 18px;
+  vertical-align: middle;
+  text-align: center;
+}
+.prev-page::before {
+  content: "\e408";
+  font-family: "Material Icons";
+  font-size: 18px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.next-page::before {
+  content: "\e409";
+  font-family: "Material Icons";
+  font-size: 18px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.end-page::before {
+  content: "\e5dd";
+  font-family: "Material Icons";
+  font-size: 18px;
+  vertical-align: middle;
+}
